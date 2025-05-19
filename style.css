@@ -55,6 +55,7 @@ header > h1 {
     
     /*This is the principles section*/ 
     div.principles {
+        z-index: 1;
         position: relative;
         top: -560px;
         padding-top: 50px;
@@ -64,33 +65,37 @@ header > h1 {
         padding-bottom: 3vw;
     }
 
-    div.flex {
+    div.principles > div.flex {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         gap: 2vw;
         padding-left: 20px;
         padding-right: 20px;
+        
     }
-    div.flex-item {
+    div.principles div.flex-item {
         background: #ffffff;
         border-radius: 30px;
         box-shadow: 0px 5px 15px rgb(255, 255, 255);
         /*border-right: 2px solid #ffffff;
         border-left: 2px solid #ffffff;*/
+        flex-basis: 0;
+        flex-grow: 1;
+
         margin: 1px;
-        padding-right: 30px;
-        padding-left: 10px;
+        padding-right: 2vw;
+        padding-left: 1vw;
         padding-top: 0px;
-        padding-bottom: 10px;
     }
-    div.flex-item > h2 {
+    div.principles div.flex-item > h2 {
         margin-left: 1vw;
+        margin-bottom: 1vw;
         color: #e69db8de;
         font-size: 3vw;
         clear: both;
     }
-    div.flex-item > img {
+    div.principles div.flex-item > img {
         width: 20%;
         height: auto;
         aspect-ratio: 1/1;
@@ -102,15 +107,201 @@ header > h1 {
         float:left;
 
         margin-right: 1vw;
-        
+        margin-bottom: 0px;
+        margin-top: 0.7vw;
         margin-left: 1vw;
     }
-    div.flex-item > p {
-        font-size: 1.7vw;
+    div.principles div.flex-item > p {
+        font-size: 1.4vw;
         color: #ffd0c7;
         text-align: justify;
         font-weight: lighter;
         margin-left: 1vw;
+    }
+
+
+    /*This is the pricing section*/
+    div.pricing {
+        
+        background: linear-gradient(to bottom, #F1E7E7, #ffffffb5 , #F1E7E7 65%);
+        position: relative; 
+        top: -600px;
+        padding-top: 50px;
+        margin: 0;
+        width: 100%;
+        padding-bottom: 3vw;
+
+        
+    }
+
+    div.pricing > h2 {
+        font-size: 8vw;
+        margin: 1vw;
+        margin-bottom: 4vw;
+        background: linear-gradient(to top, #e69db8, rgb(254, 225, 225), #e69db8);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+        text-align: center;
+    }
+
+    div.pricing > div.flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 2vw;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 0px;
+    }
+
+    div.pricing div.flex-item {
+        background: #ffffff;
+        border-radius: 30px;
+        box-shadow: 0px 5px 15px rgb(219, 219, 219);
+        /*border-right: 2px solid #ffffff;
+        border-left: 2px solid #ffffff;*/
+        flex-basis: 0;
+        flex-grow: 1;
+
+        margin: 1px;
+        padding-right: 2vw;
+        padding-left: 1vw;
+        padding-top: 0px;
+
+        min-height: 30vw;
+        max-width: 23vw;
+    }
+
+    #pro {
+        box-shadow: 0px 2px 10px #f47786;
+    }
+    #enterprise {
+        box-shadow: 0px 5px 35px #ff9faa;
+    }
+
+    .price-card-header {
+        position: relative;
+        top: -20px;
+        left: -1vw;
+        width: calc(100% + 3vw);
+
+        margin: 0;
+        height: 5vw;
+        padding-top: 2vw;
+        padding-bottom: 0vw;
+
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+
+        
+    }
+
+    .price-card-header > h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 3vw;
+        text-align: center;
+
+    }
+
+    #enterprise > div {
+        background: linear-gradient(to right, #F1E7E7, #FFD0C7, #F1E7E7);
+        box-shadow: 0px 10px 45px #ecc2b9;
+    }
+    #enterprise h2, #enterprise h5{
+        color: #ffffff;
+        text-shadow: 0px 0px 10px rgb(255, 255, 255);
+    }
+
+    #pro > div {
+        background: linear-gradient(to right, #E69DB8, #FFD0C7, #E69DB8);
+        box-shadow: 0px 10px 15px #eab4c0;
+    }
+    #pro h2, #pro h5 {
+        color: #ffffff;
+        text-shadow: 0vw 0px 30px #ffffff;
+
+    }
+
+    #basic > div {
+        background: rgb(254, 225, 225);
+        box-shadow: 0px 10px 15px #dcdcdc;
+    }
+    #basic h2, #basic h5 {
+        color: #E69DB8;
+        text-shadow: 0px 5px 10px rgb(250, 250, 250);
+    }
+
+
+    .pricing h3 {
+        font-size: 10vw;
+        text-align: center;
+        display: inline;
+        float: left;
+        margin: 0;
+        margin-bottom: 1vw;
+    }
+
+    .pricing p {
+        clear: both;
+    }
+
+
+    #basic > p {
+        font-size: 1.4vw;
+        color: #E69DB8;
+        text-align: justify;
+        font-weight: lighter;
+        margin-left: 1vw;
+    }
+    #basic > h3, #basic h4 {
+        color: #E69DB8; 
+    }
+
+    #pro > p {
+        font-size: 1.4vw;
+                background: linear-gradient(to right, #ef7aa5, #ff3f86, #ef7aa5);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+        text-align: justify;
+        font-weight: lighter;
+        margin-left: 1vw;
+        text-shadow: 0px 0px 10px rgb(255, 96, 96);
+    }
+
+    #pro > h3, #pro h4 {
+        color: #ff72a687; 
+        text-shadow: 0px 0px 10px rgb(255, 96, 96);
+    }
+
+    #enterprise > p {
+        font-size: 1.4vw;
+        color: rgb(243, 172, 172);
+        text-shadow: 0px 0px 20px #ff6b6b;
+        text-align: justify;
+        font-weight: heavier;
+        margin-left: 1vw;
+    }
+    #enterprise > h3, #enterprise h4 {
+        color: rgb(243, 172, 172);
+        text-shadow: 0px 0px 15px #febaba;
+    }
+
+    div.signup {
+        border-radius: 10px;
+        text-align: center;
+        text-justify: center;
+        width: 50%;
+        margin-left: 25%;
+    }
+    div.signup > h5 {
+        font-size: 1.4vw;
+    }
+
+    div#enterprise > div.signup {
+        box-shadow: 0px 10px 25px #ecc2b9;
     }
 }
 
@@ -155,6 +346,7 @@ header > h1 {
     
     /*This is the principles section*/ 
     div.principles {
+        z-index: 1;
         position: relative;
         top: -258px;
         padding-top: 50px;
@@ -166,6 +358,7 @@ header > h1 {
     div.flex {
         display: flex;
         flex: 1fr;
+        gap: 5vw;
         flex-direction: column;
         padding-left: 20px;
         padding-right: 20px;
@@ -177,6 +370,8 @@ header > h1 {
         background: rgb(255, 255, 255);
         border-radius: 30px;
         box-shadow: 0px 5px 15px rgb(255, 255, 255);
+
+        
 
         margin: 10px;
         padding-right: 30px;
@@ -213,5 +408,199 @@ header > h1 {
     }
 
 
+    /*This is the pricing section*/
+    div.pricing {
+        
+        background: linear-gradient(to bottom, #F1E7E7, #ffffffb5 , #F1E7E7 65%);
+        position: relative; 
+        top: -250px;
+        padding-top: 50px;
+        margin: 0;
+        width: 100%;
+        padding-bottom: 3vw;
+
+        
+    }
+
+    div.pricing > h2 {
+        font-size: 16vw;
+        margin: 1vw;
+        margin-bottom: 8vw;
+        background: linear-gradient(to top, #e69db8, rgb(254, 225, 225), #e69db8);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+        text-align: center;
+    }
+
+    div.pricing > div.flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        gap:12vw;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 0px;
+    }
+
+    div.pricing div.flex-item {
+        background: #ffffff;
+        border-radius: 30px;
+        box-shadow: 0px 5px 15px rgb(219, 219, 219);
+        /*border-right: 2px solid #ffffff;
+        border-left: 2px solid #ffffff;*/
+        flex-basis: 0;
+        flex-grow: 1;
+
+        margin: 1px;
+        padding-right: 2vw;
+        padding-left: 1vw;
+        padding-top: 0px;
+
+        width: 90%;
+        max-height: 37vw;
+    }
+
+    #pro {
+        box-shadow: 0px 2px 10px #f47786;
+    }
+    #enterprise {
+        box-shadow: 0px 5px 35px #ff9faa;
+    }
+
+    .price-card-header {
+        position: relative;
+        top: -20px;
+        left: -1vw;
+        width: calc(100% + 3vw);
+
+        margin: 0;
+        height: 9vw;
+        padding-top: 3vw;
+        padding-bottom: 0vw;
+
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+
+        
+    }
+
+    .price-card-header > h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 6vw;
+        text-align: center;
+
+    }
+
+    #enterprise > div {
+        background: linear-gradient(to right, #F1E7E7, #FFD0C7, #F1E7E7);
+        box-shadow: 0px 10px 45px #ecc2b9;
+    }
+    #enterprise h2, #enterprise h5{
+        color: #ffffff;
+        text-shadow: 0px 0px 10px rgb(255, 255, 255);
+    }
+
+    #pro > div {
+        background: linear-gradient(to right, #E69DB8, #FFD0C7, #E69DB8);
+        box-shadow: 0px 10px 15px #eab4c0;
+    }
+    #pro h2, #pro h5 {
+        color: #ffffff;
+        text-shadow: 0vw 0px 30px #ffffff;
+
+    }
+
+    #basic > div {
+        background: rgb(254, 225, 225);
+        box-shadow: 0px 10px 15px #dcdcdc;
+    }
+    #basic h2, #basic h5 {
+        color: #E69DB8;
+        text-shadow: 0px 5px 10px rgb(250, 250, 250);
+    }
+
+
+    .pricing h3 {
+        font-size: 17vw;
+        text-align: center;
+        display: inline;
+        float: left;
+        margin: 0;
+        margin-right: 7vw;
+        margin-bottom: 1vw;
+        margin-left: 3vw;;
+    }
+
+    .pricing p {
+        position: relative;
+        text-align: justify;
+        font-weight: lighter;
+        margin-left: 10vw;
+        width: 60vw;
+        top: -5vw;
+        left: +12vw;
+    }
+
+
+    .pricing h4 {
+        position: relative;
+        left: -7vw;
+    }
+
+    #basic > p {      
+        font-size: 2vw;
+        color: #E69DB8;
+    }
+    #basic > h3, #basic h4 {
+        color: #E69DB8; 
+    }
+
+    #pro > p {
+        font-size: 2vw;
+                background: linear-gradient(to right, #ef7aa5, #ff3f86, #ef7aa5);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+        text-shadow: 0px 0px 10px rgb(255, 96, 96);
+    }
+
+    #pro > h3, #pro h4 {
+        color: #ff72a687; 
+        text-shadow: 0px 0px 10px rgb(255, 96, 96);
+    }
+
+    #enterprise > p {
+        font-size: 2vw;
+        color: rgb(243, 172, 172);
+        text-shadow: 0px 0px 20px #ff6b6b;
+        left: +2vw;
+        width: 70vw;
+    }
+    #enterprise > h3, #enterprise h4 {
+        color: rgb(243, 172, 172);
+        text-shadow: 0px 0px 15px #febaba;
+    }
+
+    div.signup {
+        clear: both;
+        border-radius: 10px;
+        text-align: center;
+        text-justify: center;
+        width: 40%;
+        margin-left: 50%;
+
+        position: relative;
+        top: -5vw;
+    }
+    div.signup > h5 {
+        font-size: 4vw;
+    }
+
+    div#enterprise > div.signup {
+        box-shadow: 0px 10px 25px #ecc2b9;
+    }
 }
 
